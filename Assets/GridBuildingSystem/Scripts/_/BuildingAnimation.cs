@@ -9,7 +9,7 @@ public class BuildingAnimation : MonoBehaviour {
     private float time;
 
     private void Update() {
-        time += Time.deltaTime;
+        time += Time.deltaTime; 
 
         transform.localScale = new Vector3(1, animationCurve.Evaluate(time), 1);
     }

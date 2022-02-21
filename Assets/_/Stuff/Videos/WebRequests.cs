@@ -26,11 +26,11 @@ public static class WebRequests {
         using (UnityWebRequest unityWebRequest = UnityWebRequest.Get(url)) {
             yield return unityWebRequest.SendWebRequest();
 
-            if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError) {
-                onError(unityWebRequest.error);
-            } else {
-                onSuccess(unityWebRequest.downloadHandler.text);
-            }
+            // if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError) {
+            //     onError(unityWebRequest.error);
+            // } else {
+            //     onSuccess(unityWebRequest.downloadHandler.text);
+            // }
         }
     }
 
@@ -43,12 +43,12 @@ public static class WebRequests {
         using (UnityWebRequest unityWebRequest = UnityWebRequestTexture.GetTexture(url)) {
             yield return unityWebRequest.SendWebRequest();
 
-            if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError) {
-                onError(unityWebRequest.error);
-            } else {
-                DownloadHandlerTexture downloadHandlerTexture = unityWebRequest.downloadHandler as DownloadHandlerTexture;
-                onSuccess(downloadHandlerTexture.texture);
-            }
+            // if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError) {
+            //     onError(unityWebRequest.error);
+            // } else {
+            //     DownloadHandlerTexture downloadHandlerTexture = unityWebRequest.downloadHandler as DownloadHandlerTexture;
+            //     onSuccess(downloadHandlerTexture.texture);
+            // }
         }
     }
 
