@@ -66,6 +66,12 @@ public class GridBuildingSystem3D : MonoBehaviour {
 
     }
 
+    private void Start() {
+        DeselectObjectType();
+        FindObjectOfType<CursorController>().ToggleMouseOn();
+        FindObjectOfType<CursorController>().CursorPointerHand();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0) && placedObjectTypeSO != null) {
             Vector3 mousePosition = Mouse3D.GetMouseWorldPosition();
@@ -107,9 +113,16 @@ public class GridBuildingSystem3D : MonoBehaviour {
             dir = PlacedObjectTypeSO.GetNextDir(dir);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { placedObjectTypeSO = placedObjectTypeSOList[0]; RefreshSelectedObjectType(); }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { 
+            placedObjectTypeSO = placedObjectTypeSOList[0]; RefreshSelectedObjectType(); 
+            FindObjectOfType<CursorController>().ToggleMouseOff();
+        }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0)) { DeselectObjectType(); }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { 
+            DeselectObjectType();
+            FindObjectOfType<CursorController>().ToggleMouseOn();
+            FindObjectOfType<CursorController>().CursorPointerHand();
+    }
 
 
         if (Input.GetMouseButtonDown(1)) {
@@ -131,7 +144,8 @@ public class GridBuildingSystem3D : MonoBehaviour {
     }
 
     private void DeselectObjectType() {
-        placedObjectTypeSO = null; RefreshSelectedObjectType();
+        placedObjectTypeSO = null; 
+        RefreshSelectedObjectType();
     }
 
     private void RefreshSelectedObjectType() {

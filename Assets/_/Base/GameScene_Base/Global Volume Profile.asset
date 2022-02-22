@@ -80,7 +80,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.369
+    m_Value: 0.402
     min: 0
     max: 1
   smoothness:
@@ -144,7 +144,7 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 27.81
     min: 0.1
   aperture:
     m_OverrideState: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
     max: 32
   focalLength:
     m_OverrideState: 1
-    m_Value: 60
+    m_Value: 34
     min: 1
     max: 300
   bladeCount:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.12
     min: 0
   intensity:
     m_OverrideState: 1
@@ -203,8 +203,8 @@ MonoBehaviour:
     m_Value: 65472
     min: 0
   tint:
-    m_OverrideState: 0
-    m_Value: {r: 0.6603774, g: 0.24668077, b: 0.22116414, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.7830189, g: 0.32941273, b: 0.2991723, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
